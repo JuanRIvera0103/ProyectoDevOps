@@ -4,6 +4,10 @@
     {
         public double balance { get; set; }
 
+        public string Propietario { get; set; }
+
+        public bool esta_bloqueada { get; set; }
+
         public CuentaBanco()
         {
         }
@@ -42,6 +46,22 @@
 
             Retirar(monto);
             cuenta.Agregar(monto);
+        }
+
+        public string retornartextofondos()
+        {
+            if (balance > 0)
+            {
+                return "Hay fondos";
+            }
+            else if (esta_bloqueada)
+            {
+                return "Fondos bloqueados";
+            }
+            else
+            {
+                return "No hay fondos";
+            }
         }
     }
 }
