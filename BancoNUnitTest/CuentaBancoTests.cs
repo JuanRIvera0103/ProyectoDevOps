@@ -22,10 +22,10 @@ namespace BancoNUnitTest
         public void Retirar_Fondos_Actualizar_Balance()
         {
             //Arrange
-            var cuenta = new CuentaBanco(1_000);
+            var cuenta = new CuentaBanco(1_500);
 
             //Act
-            cuenta.Retirar(500);
+            cuenta.Retirar(1000);
 
             //Assert
             Assert.AreEqual(500, cuenta.balance);
