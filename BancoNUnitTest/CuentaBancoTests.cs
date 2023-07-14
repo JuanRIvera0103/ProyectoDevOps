@@ -45,5 +45,18 @@ namespace BancoNUnitTest
             Assert.AreEqual(500, cuenta.balance);
             Assert.AreEqual(500, otraCuenta.balance);
         }
+
+        [Test]
+        public void Metodo_Pruebas()
+        {
+            //Arrange
+            var cuenta = new CuentaBanco(2_000);
+            var otraCuenta = new CuentaBanco();
+
+            //Act
+            cuenta.TransferirFondos(otraCuenta, 500);
+
+           
+        }
     }
 }
