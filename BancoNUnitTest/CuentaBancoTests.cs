@@ -25,7 +25,7 @@ namespace BancoNUnitTest
             var cuenta = new CuentaBanco(1_600);
 
             //Act
-            cuenta.Retirar(1100);
+            cuenta.Retirar(500);
 
             //Assert
             Assert.AreEqual(500, cuenta.balance);
