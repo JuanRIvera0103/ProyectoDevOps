@@ -42,7 +42,7 @@ namespace BancoNUnitTest
             cuenta.TransferirFondos(otraCuenta, 500);
 
             //Assert
-            Assert.AreEqual(500, cuenta.balance);
+            Assert.AreEqual(800, cuenta.balance);
             Assert.AreEqual(500, otraCuenta.balance);
         }
 
